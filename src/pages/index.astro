@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 import Servicios from '../components/Servicios.astro';
 import Carrousel from '../components/Carrousel.astro';
 import Detalle from '../components/Detalle.astro';
+import Contacto from '../components/react/Contacto.jsx'
 ---
 
 <Layout title="Lucas Marks - Productor, asesor de seguros">
@@ -20,6 +21,7 @@ import Detalle from '../components/Detalle.astro';
 			<Detalle />
 			<Carrousel />
 			<Servicios/>
+			<Contacto client:only>
 		</main>
 
 		<footer>
@@ -45,3 +47,4 @@ import Detalle from '../components/Detalle.astro';
 	}
 
 </style>
+../components/Contacto.jsx
