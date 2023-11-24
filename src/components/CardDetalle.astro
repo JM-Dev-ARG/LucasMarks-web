@@ -1,0 +1,27 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	icon: string;
+}
+
+const { icon, title, body } = Astro.props;
+---
+
+<div class="card w-[250px] 2xl:w-[500px] flex lg:flex-col ">
+	<figure >
+		<img src={icon} alt={title} class="max-sm:h-[100px] max-sm:w-[100px] max-[770px]:h-[120px] max-[770px]:w-[120px] h-[140px] w-[140px] 2xl:w-[180px] 2xl:h-[180px] "  />
+	</figure>
+	<div class="card-body items-center text-center text-slate-950 p-0 lg:mt-3 2xl:mt-8 md:m-0 ">
+		<h2 class="card-title h-5 mb-1 2xl:text-4xl 2xl:mb-3">{title}</h2>
+		<p class="h-28 text-sm leading-tight 2xl:text-2xl">{body}</p>
+		
+	</div>
+</div>
+<style>
+/* 	img {
+	height: 90px;
+	width: 90px;
+
+	} */
+</style>

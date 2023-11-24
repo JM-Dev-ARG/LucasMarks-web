@@ -1,0 +1,18 @@
+---
+import CardDetalle from "./CardDetalle.astro";
+
+const url = "http://localhost:4321/../../assets/data/CardDetalle.json"
+const res = await fetch(url)
+const docs = await res.json()
+
+---
+<p class="text-6xl text-slate-800 mt-10">¿Porque elegirme?</p>
+<div class="flex items-center justify-evenly max-sm:flex-col my-10 lg:mt-20 lg:mb-10 md:gap-4 md:flex-row lg:gap-14 lg:flex-row  w-[90%]" id="cardSlot">
+    {
+        docs.map(doc=>(
+            <CardDetalle title={doc.title} icon={doc.icon} body={doc.body}/>
+        ))
+    }
+	
+</div>
+

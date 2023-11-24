@@ -1,0 +1,56 @@
+---
+import CarrouselCard from "./CarrouselCard.astro";
+
+const url = "http://localhost:4321/../../assets/data/CardSlider.json"
+const res = await fetch(url)
+const docs = await res.json()
+---
+
+<div class="splide h-[270px] sm:h-[350px] w-full  " role="group" >
+    <div class="splide__track ">
+            <ul class="splide__list w-full  ">
+                {
+                    docs.map(doc=>(
+                    <li class="splide__slide grid place-items-center h-[200px] md:h-[300px] ">
+                        <CarrouselCard title={doc.title} img={doc.img} btn={doc.btn}/>
+                    </li>
+        ))
+                }        
+            </ul>
+    </div>
+</div>
+
+
+
+<script>
+import '@splidejs/splide/css';
+import '@splidejs/splide/css/skyblue';
+import '@splidejs/splide/css/sea-green';
+import '@splidejs/splide/css/core';
+import Splide from '@splidejs/splide';
+    
+    
+var splide = new Splide( '.splide', {
+    rewind: true,
+    type   : 'loop',
+    padding: 1,
+    snap   : true,
+    perPage: 2,
+    breakpoints:{
+
+        800:{
+            arrows:false,
+            perPage: 1,
+        },
+    }
+
+} );
+
+splide.mount();
+</script>
+
+<style>
+    .splide{
+        padding: 10px;
+    }
+</style>

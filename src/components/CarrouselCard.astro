@@ -1,0 +1,21 @@
+---
+interface Props{
+    img: string;
+    btn: string,
+    title: string
+}
+const {img, btn, title} = Astro.props;
+---
+
+<div class="h-[95%] w-[95%] bg-center bg-cover bg-no-repeat grid place-items-center mx-1 " style=`background-image: url(${img});`>
+    <div class=" h-full md:h-[80%] flex flex-col justify-end items-center gap-3 mb-12 p-1" >
+        <p class="text-2xl text-center font-bold uppercase texto">{title}</p>
+        <a class="btn btn-wide lg:hover:bg-yellow-700 bg-[#FF9F00] " target="_blank" href={btn}>Consultar</a>
+    </div>
+</div>
+
+<style>
+    .texto{
+        color: contrast;
+    }
+</style>
