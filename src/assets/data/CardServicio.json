@@ -1,28 +1,28 @@
 [
     {
         "id": 1,
-        "icon":"../../public/assets/img/funnel.svg" ,
+        "icon":"../../dist/assets/img/funnel.svg" ,
         "title":"COTIZACIONES PERSONALIZADAS" ,
         "body":"Te ofrecemos diferentes opciones, en diferentes ,compañías y diferentes beneficios para que vos elijas." ,
         "visible":"none"
     },
     {
         "id": 2,
-        "icon":"../../public/assets/img/thumb-up.svg" ,
+        "icon":"../../dist/assets/img/thumb-up.svg" ,
         "title":"AGILIDAD ADMINISTRATIVA" ,
         "body":"Certificados de cobertura inmediatos y asistencia con todas tus dudas.",
         "visible":"none"
     },
     {
         "id": 3,
-        "icon":"../../public/assets/img/calendar.svg", 
+        "icon":"../../dist/assets/img/calendar.svg", 
         "title":"GESTIÓN DE SINIESTROS", 
         "body":"Junto a nuestro principal socio estratégico; MAKLER Seguros, estaremos para guiarte durante todo el proceso, desde la denuncia hasta la resolución final.",
         "visible":"inherit"
     },
     {
         "id": 4,
-        "icon":"../../public/assets/img/group.svg" ,
+        "icon":"../../dist/assets/img/group.svg" ,
         "title":"PLANES DE AFINIDAD", 
         "body":"Vos y tus compañeros pueden ser parte de un plan “empresa” con beneficios exclusivos para empleados.",
         "visible":"none"
