@@ -1,9 +1,8 @@
 ---
 import CarrouselCard from "./CarrouselCard.astro";
+import Data from "../../public/assets/data/CardSlider.json"
 
-const url = "../../assets/data/CardSlider.json"
-const res = await fetch(url)
-const docs = await res.json()
+const data = Data
 ---
 <div class="grid place-items-center mb-4  gap-6">
 <p class="text-slate-800 text-6xl">Riesgos</p>
@@ -14,7 +13,7 @@ const docs = await res.json()
     <div class="splide__track ">
             <ul class="splide__list w-full  ">
                 {
-                    docs.map(doc=>(
+                    data.map(doc=>(
                     <li class="splide__slide grid place-items-center h-[200px] md:h-[300px] ">
                         <CarrouselCard title={doc.title} img={doc.img} btn={doc.btn}/>
                     </li>

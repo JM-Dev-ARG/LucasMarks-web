@@ -1,16 +1,15 @@
 ---
 import CardServicio from "./CardServicio.astro";
+import Data from "../../public/assets/data/CardServicio.json"
 
-const url = "../../assets/data/CardServicio.json"
-const res = await fetch(url)
-const docs = await res.json()
+const data = Data
 
 ---
 
 <p class="text-6xl text-slate-800">Servicios</p>
 <div class="flex items-center justify-evenly  my-10 lg:my-15 md:gap-4 max-[900px]:flex-col lg:gap-6 lg:flex-row w-full px-4">
     {
-        docs.map(doc=>(
+        data.map(doc=>(
             <CardServicio title={doc.title} icon={doc.icon} body={doc.body} visible={doc.visible}/>
         ))
     }
