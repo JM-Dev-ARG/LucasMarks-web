@@ -5,13 +5,13 @@ import img from "../../public/assets/img/LucasMarks_V2-02.png"
 ---
 
 <div  class="flex w-full  items-start justify-around bg-slate-50 sticky py-3 top-0 z-10 shadow-md">
-        <a href="" class="cursor-pointer h-[60px] grid place-items-center">
+        <a href="#inicio" class="cursor-pointer h-[60px] grid place-items-center">
             <Image src={img} class="h-[52.8px] w-[250px] top-0" alt="Lucas Marks, asesor de seguros - logo"></Image>
         </a>
     <div class="flex items-center justify-center  ">
         <ul class="flex items-center justify-center gap-6 h-[60px] max-[600px]:hidden">
-            <li><a href="" class="text-slate-950 hover:text-[#17A2B8] font-semibold text-lg">Sercicios</a></li>
-            <li><a href="" class="text-slate-950 hover:text-[#17A2B8] font-semibold text-lg">Contacto</a></li>
+            <li><a id="navItem" href="#servicios" class="text-slate-950 hover:text-[#17A2B8] font-semibold text-lg">Sercicios</a></li>
+            <li><a id="navItem" href="#contacto" class="text-slate-950 hover:text-[#17A2B8] font-semibold text-lg">Contacto</a></li>
         </ul>
         <div class="collapse min-[601px]:hidden p-0 ">
             <input type="checkbox" id="menu" /> 
@@ -22,8 +22,8 @@ import img from "../../public/assets/img/LucasMarks_V2-02.png"
             </div>
             <div class="collapse-content p-0 pb-0 "> 
                 <ul class="flex flex-col gap-2 ">
-                    <li><a href="" class="text-slate-950 hover:text-[#17A2B8] font-semibold text-md">Sercicios</a></li>
-                    <li><a href="" class="text-slate-950 hover:text-[#17A2B8] font-semibold text-md">Contacto</a></li>
+                    <li><a id="navItem" href="#servicios" class="text-slate-950 hover:text-[#17A2B8] font-semibold text-md">Sercicios</a></li>
+                    <li><a id="navItem" href="#contacto" class="text-slate-950 hover:text-[#17A2B8] font-semibold text-md">Contacto</a></li>
                 </ul>
             </div>
         </div>
@@ -60,5 +60,6 @@ import img from "../../public/assets/img/LucasMarks_V2-02.png"
 
     })
     })
+
 
 </script>
