@@ -1,6 +1,6 @@
 ---
 import CarrouselCard from "./CarrouselCard.astro";
-import Data from "../../public/assets/data/CardSlider.json"
+import Data from "../assets/data/CardSlider.json"
 
 const data = Data
 ---
@@ -9,12 +9,12 @@ const data = Data
 <p class=" text-sm text-center text-slate-700 p-2">Contamos con los planes más solicitados y con el respaldo que brinda
     un Broker Corporativo como Makler S.A.</p>
 </div>
-<div class="splide h-[270px] sm:h-[350px] w-full  " role="group" >
+<div class="splide h-[270px] sm:h-[350px] w-full 2xl:h-[450px]  " role="group" >
     <div class="splide__track ">
             <ul class="splide__list w-full  ">
                 {
                     data.map(doc=>(
-                    <li class="splide__slide grid place-items-center h-[200px] md:h-[300px] ">
+                    <li class="splide__slide grid place-items-center h-[200px] md:h-[300px] 2xl:h-[400px] ">
                         <CarrouselCard title={doc.title} img={doc.img} btn={doc.btn}/>
                     </li>
         ))

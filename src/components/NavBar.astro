@@ -1,10 +1,12 @@
 ---
+import { Image } from "astro:assets";
+import img from "../assets/img/LucasMarks_V2-02.png"
 
 ---
 
 <div  class="flex w-full  items-start justify-around bg-slate-50 sticky py-3 top-0 z-10 shadow-md">
         <a href="" class="cursor-pointer h-[60px] grid place-items-center">
-            <img src="../dist/assets/img/LucasMarks_V2-02.png" class="h-[52.8px] w-[250px] top-0"></img>
+            <Image src={img} class="h-[52.8px] w-[250px] top-0" alt="Lucas Marks, asesor de seguros - logo"></Image>
         </a>
     <div class="flex items-center justify-center  ">
         <ul class="flex items-center justify-center gap-6 h-[60px] max-[600px]:hidden">
