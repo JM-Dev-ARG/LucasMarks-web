@@ -1,19 +1,19 @@
 [
     {
         "id": 1,
-        "icon":"./src/assets/img/empresa.svg",
+        "icon":"../../public/assets/img/empresa.svg",
         "title": "EMPRESA",
         "body": "Somos una empresa joven dedicada a la administración de riesgos corporativos y planes de Afinidad para sus empleados."
     },
     {
         "id": 2,
-        "icon":"./src/assets/img/calidad.svg",
+        "icon":"../../public/assets/img/calidad.svg",
         "title": "CALIDAD",
         "body": "La profesionalidad en nuestros procedimientos ha logrado la certificación del sistema de calidad en la gestión del riesgo."
     },
     {
         "id": 3,
-        "icon":"./src/assets/img/premio.svg",
+        "icon":"../../public/assets/img/premio.svg",
         "title": "SERVICIO NOTABLE",
         "body": "Estamos dedicados a proveer el nivel de servicio más alto del mercado."
     }

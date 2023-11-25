@@ -1,85 +1,85 @@
 [
     {
         "id": 1,
-        "img":"./src/assets/img/hogar.png",
+        "img":"../../public/assets/img/hogar.png",
         "title": "HOGAR",
         "btn": "https://walink.co/3ad4b1"
     },
     {
         "id": 2,
-        "img":"./src/assets/img/autos.png",
+        "img":"../../public/assets/img/autos.png",
         "title": "automotores",
         "btn": "https://walink.co/70632d"
     },
     {
         "id": 3,
-        "img":"./src/assets/img/vida.png",
+        "img":"../../public/assets/img/vida.png",
         "title": "vida",
         "btn": "https://walink.co/dca37e"
     },
     {
         "id": 4,
-        "img":"./src/assets/img/accidenteP.png",
+        "img":"../../public/assets/img/accidenteP.png",
         "title": "accidentes personales",
         "btn": "https://walink.co/139fd6"
     },
     {
         "id": 5,
-        "img":"./src/assets/img/caucion.png",
+        "img":"../../public/assets/img/caucion.png",
         "title": "caución",
         "btn": "https://walink.co/90c4a5"
     },
     {
         "id": 6,
-        "img":"./src/assets/img/civil.png",
+        "img":"../../public/assets/img/civil.png",
         "title": "responsabilidad civil",
         "btn": "https://walink.co/fedf14"
     },
     {
         "id": 7,
-        "img":"./src/assets/img/comercio.png",
+        "img":"../../public/assets/img/comercio.png",
         "title": "integrales de comercio",
         "btn": "https://walink.co/f9a212"
     },
     {
         "id": 8,
-        "img":"./src/assets/img/agricola.png",
+        "img":"../../public/assets/img/agricola.png",
         "title": "agrícola",
         "btn": "https://walink.co/71a591"
     },
     {
         "id": 9,
-        "img":"./src/assets/img/cyber_riesgo.png",
+        "img":"../../public/assets/img/cyber_riesgo.png",
         "title": "cyber risk",
         "btn": "https://walink.co/7c1d58"
     },
     {
         "id": 10,
-        "img":"./src/assets/img/flota.png",
+        "img":"../../public/assets/img/flota.png",
         "title": "Flotas",
         "btn": "https://walink.co/69ec8d"
     },
     {
         "id": 11,
-        "img":"./src/assets/img/construccion.png",
+        "img":"../../public/assets/img/construccion.png",
         "title": "Construcción",
         "btn": "https://walink.co/456137"
     },
     {
         "id": 12,
-        "img":"./src/assets/img/riesgoT.png",
+        "img":"../../public/assets/img/riesgoT.png",
         "title": "riesgos del trabajo",
         "btn": "https://walink.co/14162d"
     },
     {
         "id": 13,
-        "img":"./src/assets/img/transporte.png",
+        "img":"../../public/assets/img/transporte.png",
         "title": "transportes",
         "btn": "https://walink.co/97f481"
     },
     {
         "id": 14,
-        "img":"./src/assets/img/todo.png",
+        "img":"../../public/assets/img/todo.png",
         "title": "all risk",
         "btn": "https://walink.co/11df68"
     }
