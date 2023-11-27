@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import img from "../../public/assets/img/whatsapp.png"
+---
+
+<a class="btnWA" href="https://walink.co/efb238" target="_blank">
+    <Image src={img} alt="whatsapp" class="img"  ></Image>
+    <img >
+</a> 
+
+<style>
+    .btnWA{
+    position: fixed; 
+    bottom: 1.25rem;
+    right: 1.25rem; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    cursor: pointer; 
+    }
+.btnWA .img{
+    width: 2.5rem;
+    height: 2.5rem;
+    }
+</style>

@@ -1,4 +1,6 @@
 ---
+import BtnWhatsApp from '../components/BtnWhatsApp.astro';
+import NavBar from '../components/NavBar.astro';
 interface Props {
 	title: string;
 }
@@ -16,8 +18,9 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body >
+		<NavBar />
 		<slot />
+		<BtnWhatsApp/>
 	</body>
 </html>
 <style is:global>

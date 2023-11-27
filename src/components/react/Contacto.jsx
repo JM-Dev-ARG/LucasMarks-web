@@ -20,7 +20,7 @@ const Contacto = () => {  const [showAutomotoresForm, setShowAutomotoresForm] = 
         <div class="flex flex-col  items-center sm:justify-center md:justify-start flex-auto ">
             <div class="relative sm:w-1/2 xl:w-3/5  h-full  md:flex flex-auto flex-col items-center justify-center p-4 overflow-hidden text-white gap-6">
                 <div  class="w-full">
-                    <p class="text-6xl text-slate-100 text-center mb-6">Solicita tu Cotización</p>
+                    <p class="text-6xl text-slate-100 text-center my-8 md:mt-0 ">Solicita tu Cotización</p>
                 </div>
                 <div  class="flex gap-5 flex-col md:flex-row w-full justify-center items-center">
                     <button class="btn glass" onClick={handleAutomotoresButtonClick} >Automotores</button>
