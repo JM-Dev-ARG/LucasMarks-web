@@ -13,6 +13,7 @@
     "@astrojs/netlify": "^3.0.4",
     "@astrojs/react": "^3.0.6",
     "@astrojs/tailwind": "^5.0.2",
+    "@emailjs/browser": "^3.11.0",
     "@splidejs/splide": "^4.1.4",
     "@types/react": "^18.2.38",
     "@types/react-dom": "^18.2.17",
