@@ -1,12 +1,22 @@
 
 import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
+
+
 
 
 const FormOtros = () => {
+
     const sendEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm("service_p6sbqmo", "template_uyyxn5f", e.target, "r9UZREt8sORkURZW_").then(res=>{
-            alert("Mensaje enviado correctamente")
+            Swal.fire({
+                icon: "success",
+                title: "Solitud Enviada",
+                text: "Pronto nos pondremos en contacto contigo",
+                showConfirmButton: false,
+                timer: 4000
+            });
             e.target.reset()
         })
     }
