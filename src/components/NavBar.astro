@@ -1,6 +1,203 @@
 ---
+import MenuSVG from "./svg/MenuSVG.astro";
+import CloseSVG from "./svg/CloseSVG.astro";
+import GruaSVG from "./svg/GruaSVG.astro";
 import { Image } from "astro:assets";
 import img from "../../public/assets/img/LucasMarks_V2-02.webp";
+
+const navigation = [
+  { title: "Servicios", path: "#servicios", id: "servicios" },
+  { title: "Contacto", path: "#contato)", id: "contacto" },
+];
+---
+
+<nav
+  id="navbar"
+  class="w-full md:bg-transparent fixed scrollanimation z-10"
+>
+  <div
+    class="items-center max-w-screen-xl w-full mx-auto md:flex md:px-8 md:justify-between md:items-center"
+  >
+    <div
+      class="flex items-center justify-between px-4 md:px-0 py-1 md:py-2 md:block z-10"
+    >
+      <a
+        href="javascript:void(0)"
+        class="cursor-pointer h-[60px] grid place-items-center min-w-[250px] max-w-[250px]"
+      >
+        <Image
+          src={img}
+          class="h-[42.8px] w-[200px] md:h-[52.8px] md:w-[250px] md:top-0"
+          alt="Lucas Marks, asesor de seguros - logo"
+        />
+      </a>
+
+      <button
+        id="menu-toggle"
+        class="outline-none md:hidden w-auto flex items-cente justify-center h-full"
+      >
+        <MenuSVG className="" />
+        <CloseSVG className="hidden" />
+      </button>
+    </div>
+    <div
+      id="menu"
+      class="absolute w-full md:static md:flex flex-col md:flex-row md:items-center -top-52 md:justify-end transition-all duration-300 opacity-0 md:opacity-100 md:top-6 md:gap-4 -z-10 md:z-0 bg-transparent md:h-auto"
+    >
+      <button
+        id="menu-toggle2"
+        class="text-gray-900 outline-none md:hidden w-full h-1/4 md:h-auto flex justify-end mt-7 mr-7"
+      >
+        <CloseSVG />
+      </button>
+
+      <div class=`md:pb-0 md:mt-0 md:justify-center h-screen md:h-auto`>
+        <ul
+          class="text-center justify-center items-center space-y-4 md:flex md:space-x-6 md:space-y-0"
+        >
+          {
+            navigation.map((item) => {
+              return (
+                <li class=" hover:text-[#17A2B8] font-semibold">
+                  <a
+                    href={item.path}
+                    id={item.id}
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              );
+            })
+          }
+        </ul>
+        <div class="text-center grid place-items-center mt-3 md:hidden">
+          <a
+            id="btnGrua"
+            target="_blank"
+            href="https://asistencia.ikeargentina.com.ar/pas/?codigoproductor=2781"
+            class="text-slate-950 font-semibold bg-[#FF9F00] hover:bg-[#17A2B8] px-20 py-1 rounded-full md:px-4 md:py-2 shadow transition-all duration-300 flex gap-1"
+          >
+            Contratar Grua <GruaSVG />
+          </a>
+        </div>
+      </div>
+      <div
+        class="text-center md:grid md:w-fit place-items-center mt-3 md:mt-0 hidden md:static"
+      >
+        <a
+          id="btnGrua"
+          target="_blank"
+          href="https://asistencia.ikeargentina.com.ar/pas/?codigoproductor=2781"
+          class="text-slate-950 hover:bg-[#17A2B8] hover:text-white font-semibold text-lg flex items-center gap-1 bg-[#FF9F00] px-3 py-1 l rounded-full duration-300 ease-linear"
+        >
+          Contratar Grua<GruaSVG
+            width="32"
+            height="32"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .scrollanimation {
+    animation-timeline: scroll();
+    animation-range: 0 150px;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-name: navbarAnimation;
+  }
+
+  @keyframes navbarAnimation {
+    to {
+      background-color: #f1f1f1;
+    }
+  }
+
+  .show {
+    top: 0px;
+    background-color: #f1f1f1;
+    z-index: 10;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .close {
+    display: none;
+    opacity: 0;
+  }
+
+  .open {
+    display: block;
+    opacity: 1;
+  }
+</style>
+
+<script>
+  const menuSVG = document.getElementById("menuSVG") as HTMLButtonElement;
+  const closeSVG = document.getElementById("closeSVG") as HTMLButtonElement;
+  const toggle = document.getElementById("menu-toggle") as HTMLButtonElement;
+  const menu = document.getElementById("menu") as HTMLElement;
+  const toggle2 = document.getElementById("menu-toggle2") as HTMLButtonElement;
+  const navbar = document.getElementById("navbar") as HTMLElement;
+  const servicios = document.getElementById("servicios") as HTMLElement;
+  const contacto = document.getElementById("contacto") as HTMLElement;
+  const btnGrua = document.getElementById("btnGrua") as HTMLElement;
+
+  toggle.onclick = () => {
+    navbar.classList.remove("fixed");
+    menu.classList.toggle("show");
+    menu.classList.contains("show")
+      ? (menuSVG.classList.toggle("hidden"),
+        closeSVG.classList.remove("hidden"),
+        navbar.classList.add("fixed"))
+      : (menuSVG.classList.remove("hidden"),
+        closeSVG.classList.toggle("hidden"));
+  };
+
+  toggle2.onclick = () => {
+    menu.classList.toggle("show");
+    menu.classList.contains("show")
+      ? (menuSVG.classList.toggle("hidden"),
+        closeSVG.classList.remove("hidden"))
+      : (menuSVG.classList.remove("hidden"),
+        closeSVG.classList.toggle("hidden"));
+  };
+
+  servicios.onclick = () => {
+    menu.classList.remove("show");
+    menu.classList.contains("show")
+      ? (menuSVG.classList.toggle("hidden"),
+        closeSVG.classList.remove("hidden"))
+      : (menuSVG.classList.remove("hidden"),
+        closeSVG.classList.toggle("hidden"));
+  };
+
+  contacto.onclick = () => {
+    menu.classList.remove("show");
+    menu.classList.contains("show")
+      ? (menuSVG.classList.toggle("hidden"),
+        closeSVG.classList.remove("hidden"))
+      : (menuSVG.classList.remove("hidden"),
+        closeSVG.classList.toggle("hidden"));
+  };
+  btnGrua.onclick = () => {
+    menu.classList.remove("show");
+    menu.classList.contains("show")
+      ? (menuSVG.classList.toggle("hidden"),
+        closeSVG.classList.remove("hidden"))
+      : (menuSVG.classList.remove("hidden"),
+        closeSVG.classList.toggle("hidden"));
+  };
+</script>
+
+<!-- ---
+import { Image } from "astro:assets";
+import img from "../../public/assets/img/LucasMarks_V2-02.webp";
+import GruaSVG from "./GruaSVG.astro";
 ---
 
 <div
@@ -17,9 +214,7 @@ import img from "../../public/assets/img/LucasMarks_V2-02.webp";
     />
   </a>
   <div class="flex items-center justify-center">
-    <ul
-      class="flex items-center justify-center gap-6 h-[60px] max-[600px]:hidden"
-    >
+    <ul class="md:flex items-center justify-center gap-6 h-[60px] hidden">
       <li>
         <a
           id="navItem"
@@ -36,15 +231,25 @@ import img from "../../public/assets/img/LucasMarks_V2-02.webp";
           >Contacto</a
         >
       </li>
+      <li>
+        <a
+          id="navItem"
+          target="_blank"
+          href="https://asistencia.ikeargentina.com.ar/pas/?codigoproductor=2781"
+          class="text-slate-950 hover:bg-[#17A2B8] hover:text-white font-semibold text-lg flex items-center gap-1 bg-[#FF9F00] w-auto px-3 py-1 rounded-lg duration-300 ease-linear"
+          >Contratar Grua<GruaSVG />
+        </a>
+      </li>
     </ul>
-    <div class="collapse min-[601px]:hidden p-0 place-items-center">
+
+    <div class="collapse p-0 place-items-end md:hidden w-auto">
       <input
         type="checkbox"
         id="menu"
-        class="w-12"
+        class="w-auto overflow-visible"
       />
       <div
-        class="collapse-title grid place-items-center p-0"
+        class="collapse-title grid place-items-center p-0 w-auto"
         id="menuLogo"
       >
         <svg
@@ -83,6 +288,15 @@ import img from "../../public/assets/img/LucasMarks_V2-02.webp";
               >Contacto</a
             >
           </li>
+          <li>
+            <a
+              id="navItem"
+              target="_blank"
+              href="https://asistencia.ikeargentina.com.ar/pas/?codigoproductor=2781"
+              class="text-slate-950 hover:bg-[#17A2B8] hover:text-white font-semibold text-lg flex items-center gap-1 bg-[#FF9F00] w-auto px-3 py-1 rounded-lg duration-300 ease-linear"
+              >Contratar Grua<GruaSVG />
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -91,7 +305,7 @@ import img from "../../public/assets/img/LucasMarks_V2-02.webp";
 
 <style></style>
 <script>
-  const menu = document.getElementById("menu");
+  const menu = document.getElementById("menu") as HTMLInputElement;
   const menuLogo = document.getElementById("menuLogo");
   const navItems = document.getElementById("navItems");
   const navItemc = document.getElementById("navItemc");
@@ -146,3 +360,4 @@ import img from "../../public/assets/img/LucasMarks_V2-02.webp";
     menuLogo.appendChild(newMenu);
   });
 </script>
+ -->
