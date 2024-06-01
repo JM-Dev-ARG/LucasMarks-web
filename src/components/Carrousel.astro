@@ -1,61 +1,65 @@
 ---
 import CarrouselCard from "./CarrouselCard.astro";
-import Data from "../assets/data/CardSlider.json"
+import Data from "../assets/data/CardSlider.json";
 
-const data = Data
+const data = Data;
 ---
-<div class="grid place-items-center mb-4  gap-6">
-<p class="text-slate-800 text-6xl">Riesgos</p>
-<p class=" text-sm text-center text-slate-700 p-2">Contamos con los planes más solicitados y con el respaldo que brinda
-    un Broker Corporativo como Makler S.A.</p>
+
+<div class="grid place-items-center mb-4 gap-6">
+  <p class="text-slate-800 text-6xl mt-10">Riesgos</p>
+  <p class="text-sm text-center text-slate-700 p-2">
+    Contamos con los planes más solicitados y con el respaldo que brinda un
+    Broker Corporativo como Makler S.A.
+  </p>
 </div>
-<div class="splide h-[270px] sm:h-[350px] w-full 2xl:h-[450px]  " role="group" >
-    <div class="splide__track ">
-            <ul class="splide__list w-full  ">
-                {
-                    data.map(doc=>(
-                    <li class="splide__slide grid place-items-center h-[200px] md:h-[300px] 2xl:h-[400px] ">
-                        <CarrouselCard title={doc.title} img={doc.img} btn={doc.btn}/>
-                        
-                    </li>
+<div
+  class="splide h-[270px] sm:h-[350px] w-full 2xl:h-[450px]"
+  role="group"
+>
+  <div class="splide__track">
+    <ul class="splide__list w-full">
+      {
+        data.map((doc) => (
+          <li class="splide__slide grid place-items-center h-[200px] md:h-[300px] 2xl:h-[400px] ">
+            <CarrouselCard
+              title={doc.title}
+              img={doc.img}
+              btn={doc.btn}
+            />
+          </li>
         ))
-                }  
-                    
-            </ul>
-            <span id="servicios"></span>
-    </div>
+      }
+    </ul>
+    <span id="services"></span>
+  </div>
 </div>
-
-
 
 <script>
-import '@splidejs/splide/css';
-import '@splidejs/splide/css/skyblue';
-import '@splidejs/splide/css/sea-green';
-import '@splidejs/splide/css/core';
-import Splide from '@splidejs/splide';
-    
-    
-var splide = new Splide( '.splide', {
+  import "@splidejs/splide/css";
+  import "@splidejs/splide/css/skyblue";
+  import "@splidejs/splide/css/sea-green";
+  import "@splidejs/splide/css/core";
+  import Splide from "@splidejs/splide";
+
+  var splide = new Splide(".splide", {
     rewind: true,
-    type   : 'loop',
+    type: "loop",
     padding: 1,
-    snap   : true,
+    snap: true,
     perPage: 2,
-    breakpoints:{
-        800:{
-            arrows:false,
-            perPage: 1,
-        },
-    }
+    breakpoints: {
+      800: {
+        arrows: false,
+        perPage: 1,
+      },
+    },
+  });
 
-} );
-
-splide.mount();
+  splide.mount();
 </script>
 
 <style>
-    .splide{
-        padding: 10px;
-    }
+  .splide {
+    padding: 10px;
+  }
 </style>

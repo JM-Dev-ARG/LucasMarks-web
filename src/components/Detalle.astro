@@ -1,17 +1,26 @@
 ---
 import CardDetalle from "./CardDetalle.astro";
-import Data from "../assets/data/CardDetalle.json"
+import Data from "../assets/data/CardDetalle.json";
 
-const data = Data
-
-
+const data = Data;
 ---
-<div class="flex items-center justify-evenly max-sm:flex-col mt-10 lg:mt-20 lg:mb-10 md:gap-4 md:flex-row lg:gap-14 lg:flex-row  w-[90%]" id="cardSlot">
-    {
-        data.map(doc=>(
-            <CardDetalle title={doc.title} icon={doc.icon} body={doc.body}/>
-        ))
-    }
-	
-</div>
 
+<div
+  class="flex items-center justify-evenly max-sm:flex-col mt-10 lg:mt-20 md:gap-4 md:flex-row lg:gap-14 lg:flex-row w-[90%]"
+  id="cardSlot"
+>
+  {
+    data.map((doc) => (
+      <CardDetalle
+        title={doc.title}
+        icon={doc.icon}
+        body={doc.body}
+      />
+    ))
+  }
+</div>
+<div
+  id="risk"
+  class="h-16 md:h-8"
+>
+</div>
