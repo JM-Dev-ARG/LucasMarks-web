@@ -17,7 +17,7 @@ const Contacto = () => {
   };
 
   return (
-    <div className="min-h-[400PX]  h-auto grid bg-black w-full">
+    <div className="min-h-[400PX]  h-auto grid bg-[#030303ff] w-full">
       <div className="flex flex-col  items-center sm:justify-center md:justify-start flex-auto ">
         <div className="relative sm:w-1/2 xl:w-3/5  h-full  md:flex flex-auto flex-col items-center justify-center p-4 overflow-hidden text-white gap-6">
           <div className="w-full">
